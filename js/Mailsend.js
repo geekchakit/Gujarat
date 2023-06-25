@@ -6,17 +6,10 @@
   function PackageEnquiry(PackageName)
   {
     $("#myModal").modal("show");
-    alert(PackageName);
     localStorage.setItem("pkgname",PackageName)
   }
 
   function SendLead(){
-    alert($("#FullNameModal").val());
-    alert($("#EmailModal").val());
-    alert($("#NumberModal").val());
-    alert($("#DateModal").val());
-    alert($("#AdultModal").val());
-    alert($("#MessageModal").val());
     var templateParams = {
       from_name: $("#FullNameModal").val(),
       email_id: $("#EmailModal").val(),
@@ -50,12 +43,6 @@
 
   function SendLeadForm()
   {
-    alert($("#FullNameForm").val());
-    alert($("#EmailForm").val());
-    alert($("#NumberForm").val());
-    alert($("#DateForm").val());
-    alert($("#AdultForm").val());
-    alert($("#MessageForm").val());
     var templateParams = {
       from_name: $("#FullNameForm").val(),
       email_id: $("#EmailForm").val(),

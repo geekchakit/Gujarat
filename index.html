@@ -1994,7 +1994,7 @@ ul.gva-nav-menu>li.megamenu-main .megamenu-wrap-inner.megamenu-align-left{left:0
                                                                                                 </div>
 
                                                                                                 <div class="row">
-                                                                                                    <div class="column">
+                                                                                                    <div class="column" style="width: 100%;">
                                                                                                         <span class="wpcf7-form-control-wrap">
                                                                                                             <input
                                                                                                                 size="40"
@@ -2005,20 +2005,6 @@ ul.gva-nav-menu>li.megamenu-main .megamenu-wrap-inner.megamenu-align-left{left:0
                                                                                                                 value=""
                                                                                                                 type="text"
                                                                                                                 id="EmailForm"
-                                                                                                            />
-                                                                                                        </span>
-                                                                                                    </div>
-                                                                                                    <div class="column">
-                                                                                                        <span class="wpcf7-form-control-wrap">
-                                                                                                            <input
-                                                                                                                size="40"
-                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
-                                                                                                                aria-required="true"
-                                                                                                                aria-invalid="false"
-                                                                                                                placeholder="Your Number *"
-                                                                                                                value=""
-                                                                                                                type="number"
-                                                                                                                id="NumberForm"
                                                                                                             />
                                                                                                         </span>
                                                                                                     </div>
@@ -2039,7 +2025,7 @@ ul.gva-nav-menu>li.megamenu-main .megamenu-wrap-inner.megamenu-align-left{left:0
                                                                                                             />
                                                                                                         </span>
                                                                                                     </div>
-                                                                                                    <div class="column">
+                                                                                                    <!-- <div class="column">
                                                                                                         <span class="wpcf7-form-control-wrap">
                                                                                                             <input
                                                                                                                 class="wpcf7-form-control wpcf7-date wpcf7-validates-as-required wpcf7-validates-as-date"
@@ -2051,6 +2037,21 @@ ul.gva-nav-menu>li.megamenu-main .megamenu-wrap-inner.megamenu-align-left{left:0
                                                                                                                 id="DateForm"
                                                                                                             />
                                                                                                         </span>
+                                                                                                    </div> -->
+                                                                                                    <div class="column">
+                                                                                                        <span class="wpcf7-form-control-wrap">
+                                                                                                            <input
+                                                                                                                size="40"
+                                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
+                                                                                                                aria-required="true"
+                                                                                                                aria-invalid="false"
+                                                                                                                placeholder="Your Number *"
+                                                                                                                value=""
+                                                                                                                type="number"
+                                                                                                                id="NumberForm"
+                                                                                                            />
+                                                                                                        </span>
+                                                                                                        <p class="text-danger" id="ValidatePhone" style="font-size: 12px;" hidden></p>
                                                                                                     </div>
                                                                                                 </div>
 
@@ -5236,11 +5237,8 @@ rs-loader.spinner14 .rs-spinner-inner span:nth-child(2){-webkit-animation:rs-rev
                             </div>
 
                             <div class="row">
-                                <div class="column">
+                                <div class="column" style="width: 100%;">
                                     <span class="wpcf7-form-control-wrap"><input size="40" aria-required="true" aria-invalid="false" placeholder="Email ID *" value="" type="text" id="EmailModal" /></span>
-                                </div>
-                                <div class="column">
-                                    <span class="wpcf7-form-control-wrap"><input size="40" aria-required="true" aria-invalid="false" placeholder="Your Number *" value="" type="number" id="NumberModal" /></span>
                                 </div>
                             </div>
 
@@ -5248,8 +5246,12 @@ rs-loader.spinner14 .rs-spinner-inner span:nth-child(2){-webkit-animation:rs-rev
                                 <div class="column">
                                     <span class="wpcf7-form-control-wrap"><input size="40" aria-required="true" aria-invalid="false" placeholder="No. of Adult *" value="" type="number" id="AdultModal" /></span>
                                 </div>
-                                <div class="column">
+                                <!-- <div class="column">
                                     <span class="wpcf7-form-control-wrap"><input aria-required="true" aria-invalid="false" placeholder="Travel Date *" value="" type="date" id="DateModal" /></span>
+                                </div> -->
+                                <div class="column">
+                                    <span class="wpcf7-form-control-wrap"><input size="40" aria-required="true" aria-invalid="false" placeholder="Your Number *" value="" type="number" id="NumberModal" /></span>
+                                    <p class="text-danger" id="ValidatePhoneModel" style="font-size: 12px;"></p>
                                 </div>
                             </div>
 

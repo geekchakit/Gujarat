@@ -107,3 +107,4 @@ function SendLeadForm() {
 function CloseModal() {
   $("#myModal").modal("hide");
 }
+

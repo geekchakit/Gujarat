@@ -16,3 +16,17 @@
 @keyframes BlinkingText{
     from {color: #003651;} to {color: #ef9b11;}
 }
+
+@-webkit-keyframes blackWhite {  
+    0% { background-color: #e8604c; }
+    50% { background-color: #003651; }
+    51% { background-color: #25d366; }
+    100% { background-color: black; }
+  }
+  
+  #blinkDiv {
+      background-color: black;
+      -webkit-animation-name: blackWhite;  
+      -webkit-animation-iteration-count: infinite;  
+      -webkit-animation-duration: 2s; 
+  }   

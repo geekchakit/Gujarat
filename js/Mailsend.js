@@ -20,7 +20,7 @@ function SendLead() {
       email_id: $("#EmailModal").val(),
       contact_no: $("#NumberModal").val(),
       package_name: localStorage.getItem("pkgname"),
-      //startdate: $("#DateModal").val(),
+      startdate: $("#DateModal").val(),
       adult: $("#AdultModal").val(),
       // group:$("#GroupPKG").val(),
       message: $("#MessageModal").val(),
@@ -43,7 +43,7 @@ function SendLead() {
           $("#MessageModal").val("");
           // $("#GroupPKG").val('');
           $("#AdultModal").val("");
-          //$("#DateModal").val("");
+          $("#DateModal").val("");
           $("#myModal").modal("hide");
           $("#MineBntModal").prop("disabled", false);
           localStorage.setItem(null);
@@ -69,7 +69,7 @@ function SendLeadForm() {
       email_id: $("#EmailForm").val(),
       contact_no: $("#NumberForm").val(),
       package_name: "Sent From Form",
-     //startdate: $("#DateForm").val(),
+     startdate: $("#DateForm").val(),
       adult: $("#AdultForm").val(),
       // group:$("#GroupPKG").val(),
       message: $("#MessageForm").val(),
@@ -92,7 +92,7 @@ function SendLeadForm() {
           $("#MessageForm").val("");
           // $("#GroupPKG").val('');
           $("#AdultForm").val("");
-          //$("#DateForm").val("");
+          $("#DateForm").val("");
           $("#MineBntForm").prop("disabled", false);
           localStorage.setItem(null);
         },

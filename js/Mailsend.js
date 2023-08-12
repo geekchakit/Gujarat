@@ -29,10 +29,14 @@ function SendLead() {
     //    console.log(templateParams);
     emailjs
       .send(
-        "service_67t7hhj",
-        "template_thv6rqb",
+        // "service_67t7hhj",
+        // "template_thv6rqb",
+        // templateParams,
+        // "nmhVg3RXzbcSkzs_u"
+        "service_v2o5j0l",
+        "template_apvv4kv",
         templateParams,
-        "nmhVg3RXzbcSkzs_u"
+        "3w5lxrQSjLVVLUx6_"
       )
       .then(
         function (response) {
@@ -78,10 +82,14 @@ function SendLeadForm() {
     //    console.log(templateParams);
     emailjs
       .send(
-        "service_67t7hhj",
-        "template_thv6rqb",
+        // "service_67t7hhj",
+        // "template_thv6rqb",
+        // templateParams,
+        // "nmhVg3RXzbcSkzs_u"
+        "service_v2o5j0l",
+        "template_apvv4kv",
         templateParams,
-        "nmhVg3RXzbcSkzs_u"
+        "3w5lxrQSjLVVLUx6_"
       )
       .then(
         function (response) {

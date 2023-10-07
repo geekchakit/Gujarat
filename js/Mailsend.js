@@ -16,6 +16,7 @@ function SendLead() {
   } else {
     $("#ValidatePhoneModel").prop("hidden", true);
     var templateParams = {
+      //website: "Gujarat Trip",
       from_name: $("#FullNameModal").val(),
       email_id: $("#EmailModal").val(),
       contact_no: $("#NumberModal").val(),
@@ -73,7 +74,7 @@ function SendLeadForm() {
       email_id: $("#EmailForm").val(),
       contact_no: $("#NumberForm").val(),
       package_name: "Sent From Form",
-     startdate: $("#DateForm").val(),
+      startdate: $("#DateForm").val(),
       adult: $("#AdultForm").val(),
       // group:$("#GroupPKG").val(),
       message: $("#MessageForm").val(),

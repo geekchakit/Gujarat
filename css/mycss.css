@@ -36,6 +36,7 @@
       -webkit-animation-iteration-count: infinite;  
       -webkit-animation-duration: 2s; 
   }   
+  
 
   #ht-ctc-chat {
     -webkit-animation: vibrate 0.32s cubic-bezier(.36, .07, .19, .97) infinite;

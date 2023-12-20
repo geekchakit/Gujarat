@@ -153,10 +153,10 @@ function SendLead() {
       }).then((response) => {
         console.log(response);
         swal("Good job!", "Your Response Has been submited!", "success");
-        $("#FullNameForm").val("");
-        $("#NumberForm").val("");
-        $("#MessageForm").val("");
-        $("#MineBntForm").prop("disabled", false);
+        $("#FullNameModal").val("");
+        $("#NumberModal").val("");
+        $("#MessageModal").val("");
+        //$("#MineBntForm").prop("disabled", false);
         localStorage.setItem(null);
       });
 

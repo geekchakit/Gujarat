@@ -144,7 +144,7 @@ function SendLead() {
         package: localStorage.getItem("pkgname"),
       };
 
-      fetch("https://darshanrathbackend.onrender.com/sendEmail", {
+      fetch("https://darshanrathbackend.onrender.com/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -185,7 +185,7 @@ function SendLeadForm() {
         package: "Sent From Form",
       };
 
-      fetch("https://darshanrathbackend.onrender.com/sendEmail", {
+      fetch("https://darshanrathbackend.onrender.com/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

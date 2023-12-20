@@ -7,7 +7,7 @@ function PackageEnquiry(PackageName) {
   localStorage.setItem("pkgname", PackageName);
 }
 
-function SendLeadLegacy() {
+function SendLead() {
   var PhoneNumber = $("#NumberModal").val();
   var Length = PhoneNumber.trim().length;
   if ($("#NumberModal").val() == "" || Length != 10) {
@@ -67,7 +67,7 @@ function SendLeadLegacy() {
   }
 }
 
-function SendLeadFormLegacy() {
+function SendLeadForm() {
   var PhoneNumber = $("#NumberForm").val();
   var Length = PhoneNumber.trim().length;
   if ($("#NumberForm").val() == "" || Length != 10) {
@@ -126,87 +126,87 @@ function SendLeadFormLegacy() {
   }
 }
 
-function SendLead() {
-  var PhoneNumber = $("#NumberModal").val();
-  var Length = PhoneNumber.trim().length;
-  if ($("#NumberModal").val() == "" || Length != 10) {
-    $("#ValidatePhoneModel").text("Please give 10 digit number.");
-    $("#ValidatePhoneModel").prop("hidden", false);
-  } else {
-    if ($("#NoRobot").val() != "" && $("#NoRobot").val() == "4") {
-      $("#ValidatePhoneModel").prop("hidden", true);
-      $("#ValidateRobotModel").prop("hidden", true);
-      const data = {
-        name: $("#FullNameModal").val(),
-        message:$("#MessageModal").val(),
-        mobileNumber: $("#NumberModal").val(),
-        website: "Gujarat",
-        package: localStorage.getItem("pkgname"),
-      };
+// function SendLead() {
+//   var PhoneNumber = $("#NumberModal").val();
+//   var Length = PhoneNumber.trim().length;
+//   if ($("#NumberModal").val() == "" || Length != 10) {
+//     $("#ValidatePhoneModel").text("Please give 10 digit number.");
+//     $("#ValidatePhoneModel").prop("hidden", false);
+//   } else {
+//     if ($("#NoRobot").val() != "" && $("#NoRobot").val() == "4") {
+//       $("#ValidatePhoneModel").prop("hidden", true);
+//       $("#ValidateRobotModel").prop("hidden", true);
+//       const data = {
+//         name: $("#FullNameModal").val(),
+//         message:$("#MessageModal").val(),
+//         mobileNumber: $("#NumberModal").val(),
+//         website: "Gujarat",
+//         package: localStorage.getItem("pkgname"),
+//       };
 
-      fetch("https://darshanrathbackend.onrender.com/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }).then((response) => {
-        console.log(response);
-        swal("Good job!", "Your Response Has been submited!", "success");
-        $("#FullNameForm").val("");
-        $("#NumberForm").val("");
-        $("#MessageForm").val("");
-        $("#MineBntForm").prop("disabled", false);
-        localStorage.setItem(null);
-      });
+//       fetch("https://darshanrathbackend.onrender.com/sendEmail", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       }).then((response) => {
+//         console.log(response);
+//         swal("Good job!", "Your Response Has been submited!", "success");
+//         $("#FullNameForm").val("");
+//         $("#NumberForm").val("");
+//         $("#MessageForm").val("");
+//         $("#MineBntForm").prop("disabled", false);
+//         localStorage.setItem(null);
+//       });
 
-    } else {
-      $("#ValidateRobotModel").prop("hidden", false);
-      $("#ValidateRobotModel").text("Wrong Answer.");
-    }
-  }
-}
+//     } else {
+//       $("#ValidateRobotModel").prop("hidden", false);
+//       $("#ValidateRobotModel").text("Wrong Answer.");
+//     }
+//   }
+// }
 
-function SendLeadForm() {
-  var PhoneNumber = $("#NumberForm").val();
-  var Length = PhoneNumber.trim().length;
-  if ($("#NumberForm").val() == "" || Length != 10) {
-    $("#ValidatePhone").text("Please give 10 digit number.");
-    $("#ValidatePhone").prop("hidden", false);
-  } else {
-    if ($("#NoRobotForm").val() != "" && $("#NoRobotForm").val() == "4") {
-      $("#ValidateRobotForm").prop("hidden", true);
-      $("#ValidatePhone").prop("hidden", true);
-      const data = {
-        name: $("#FullNameForm").val(),
-        message: $("#MessageForm").val(),
-        mobileNumber: $("#NumberForm").val(),
-        website: "Gujarat",
-        package: "Sent From Form",
-      };
+// function SendLeadForm() {
+//   var PhoneNumber = $("#NumberForm").val();
+//   var Length = PhoneNumber.trim().length;
+//   if ($("#NumberForm").val() == "" || Length != 10) {
+//     $("#ValidatePhone").text("Please give 10 digit number.");
+//     $("#ValidatePhone").prop("hidden", false);
+//   } else {
+//     if ($("#NoRobotForm").val() != "" && $("#NoRobotForm").val() == "4") {
+//       $("#ValidateRobotForm").prop("hidden", true);
+//       $("#ValidatePhone").prop("hidden", true);
+//       const data = {
+//         name: $("#FullNameForm").val(),
+//         message: $("#MessageForm").val(),
+//         mobileNumber: $("#NumberForm").val(),
+//         website: "Gujarat",
+//         package: "Sent From Form",
+//       };
 
-      fetch("https://darshanrathbackend.onrender.com/sendEmail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }).then((response) => {
-        console.log(response);
-        swal("Good job!", "Your Response Has been submited!", "success");
-        $("#FullNameForm").val("");
-        $("#NumberForm").val("");
-        $("#MessageForm").val("");
-        $("#MineBntForm").prop("disabled", false);
-        localStorage.setItem(null);
-      });
+//       fetch("https://darshanrathbackend.onrender.com/sendEmail", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//       }).then((response) => {
+//         console.log(response);
+//         swal("Good job!", "Your Response Has been submited!", "success");
+//         $("#FullNameForm").val("");
+//         $("#NumberForm").val("");
+//         $("#MessageForm").val("");
+//         $("#MineBntForm").prop("disabled", false);
+//         localStorage.setItem(null);
+//       });
 
-    } else {
-      $("#ValidateRobotForm").text("Wrong Answer.");
-      $("#ValidateRobotForm").prop("hidden", false);
-    }
-  }
-}
+//     } else {
+//       $("#ValidateRobotForm").text("Wrong Answer.");
+//       $("#ValidateRobotForm").prop("hidden", false);
+//     }
+//   }
+// }
 
 function CloseModal() {
   $("#myModal").modal("hide");

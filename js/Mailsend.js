@@ -136,6 +136,7 @@ function SendLead() {
     if ($("#NoRobot").val() != "" && $("#NoRobot").val() == "4") {
       $("#ValidatePhoneModel").prop("hidden", true);
       $("#ValidateRobotModel").prop("hidden", true);
+      $("#MineBntModal").prop("disabled", true);
       const data = {
         name: $("#FullNameModal").val(),
         message:$("#MessageModal").val(),
@@ -156,13 +157,14 @@ function SendLead() {
         $("#FullNameModal").val("");
         $("#NumberModal").val("");
         $("#MessageModal").val("");
-        //$("#MineBntForm").prop("disabled", false);
+        $("#MineBntForm").prop("disabled", false);
         localStorage.setItem(null);
       });
 
     } else {
       $("#ValidateRobotModel").prop("hidden", false);
       $("#ValidateRobotModel").text("Wrong Answer.");
+      $("#MineBntModal").prop("disabled", false);
     }
   }
 }
@@ -175,6 +177,7 @@ function SendLeadForm() {
     $("#ValidatePhone").prop("hidden", false);
   } else {
     if ($("#NoRobotForm").val() != "" && $("#NoRobotForm").val() == "4") {
+      $("#MineBntForm").prop("disabled", true);
       $("#ValidateRobotForm").prop("hidden", true);
       $("#ValidatePhone").prop("hidden", true);
       const data = {
@@ -202,6 +205,7 @@ function SendLeadForm() {
       });
 
     } else {
+      $("#MineBntForm").prop("disabled", false);
       $("#ValidateRobotForm").text("Wrong Answer.");
       $("#ValidateRobotForm").prop("hidden", false);
     }

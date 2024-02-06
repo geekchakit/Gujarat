@@ -136,7 +136,7 @@ function SendLead() {
     if ($("#NoRobot").val() != "" && $("#NoRobot").val() == "4") {
       $("#ValidatePhoneModel").prop("hidden", true);
       $("#ValidateRobotModel").prop("hidden", true);
-      $("#MineBntModal").prop("disabled", true);
+      // $("#MineBntModal").prop("disabled", true);
       const data = {
         name: $("#FullNameModal").val(),
         message:$("#MessageModal").val(),
@@ -157,7 +157,7 @@ function SendLead() {
         $("#FullNameModal").val("");
         $("#NumberModal").val("");
         $("#MessageModal").val("");
-        $("#MineBntForm").prop("disabled", false);
+        // $("#MineBntForm").prop("disabled", false);
         localStorage.setItem("pkgname",null);
       });
 
@@ -177,7 +177,7 @@ function SendLeadForm() {
     $("#ValidatePhone").prop("hidden", false);
   } else {
     if ($("#NoRobotForm").val() != "" && $("#NoRobotForm").val() == "4") {
-      $("#MineBntForm").prop("disabled", true);
+      // $("#MineBntForm").prop("disabled", true);
       $("#ValidateRobotForm").prop("hidden", true);
       $("#ValidatePhone").prop("hidden", true);
       const data = {
@@ -200,7 +200,7 @@ function SendLeadForm() {
         $("#FullNameForm").val("");
         $("#NumberForm").val("");
         $("#MessageForm").val("");
-        $("#MineBntForm").prop("disabled", false);
+        // $("#MineBntForm").prop("disabled", false);
         localStorage.setItem("pkgname",null);
       });
 

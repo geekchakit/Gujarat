@@ -159,6 +159,7 @@ function SendLead() {
         $("#MessageModal").val("");
         // $("#MineBntForm").prop("disabled", false);
         localStorage.setItem("pkgname",null);
+        return true;
       });
 
     } else {
@@ -202,6 +203,7 @@ function SendLeadForm() {
         $("#MessageForm").val("");
         // $("#MineBntForm").prop("disabled", false);
         localStorage.setItem("pkgname",null);
+        // return true;
       });
 
     } else {

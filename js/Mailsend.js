@@ -145,7 +145,7 @@ function SendLead() {
         package: localStorage.getItem("pkgname"),
       };
 
-      fetch("https://darshanrathbackend.onrender.com/api/sendEmail", {
+      fetch("https://darshanrathazurebackend.azurewebsites.net/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -189,7 +189,7 @@ function SendLeadForm() {
         package: "Sent From Form",
       };
 
-      fetch("https://darshanrathbackend.onrender.com/api/sendEmail", {
+      fetch("https://darshanrathazurebackend.azurewebsites.net/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -203,7 +203,7 @@ function SendLeadForm() {
         $("#MessageForm").val("");
         // $("#MineBntForm").prop("disabled", false);
         localStorage.setItem("pkgname",null);
-        // return true;
+        return true;
       });
 
     } else {

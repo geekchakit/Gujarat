@@ -7,7 +7,7 @@ function PackageEnquiry(PackageName) {
   localStorage.setItem("pkgname", PackageName);
 }
 
-function SendLeadLegacy() {
+function SendLead() {
   var PhoneNumber = $("#NumberModal").val();
   var Length = PhoneNumber.trim().length;
   if ($("#NumberModal").val() == "" || Length != 10) {
@@ -17,25 +17,29 @@ function SendLeadLegacy() {
     if ($("#NoRobot").val() != "" && $("#NoRobot").val() == "4") {
       $("#ValidatePhoneModel").prop("hidden", true);
       $("#ValidateRobotModel").prop("hidden", true);
-      var templateParams = {
-        //website: "Gujarat Trip",
-        from_name: $("#FullNameModal").val(),
-        //email_id: $("#EmailModal").val(),
-        contact_no: $("#NumberModal").val(),
-        package_name: localStorage.getItem("pkgname"),
-        //startdate: $("#DateModal").val(),
-        //adult: $("#AdultModal").val(),
-        // group:$("#GroupPKG").val(),
-        message: $("#MessageModal").val(),
+      // var templateParams = {
+      //   //website: "Gujarat Trip",
+      //   from_name: $("#FullNameModal").val(),
+      //   //email_id: $("#EmailModal").val(),
+      //   contact_no: $("#NumberModal").val(),
+      //   package_name: localStorage.getItem("pkgname"),
+      //   //startdate: $("#DateModal").val(),
+      //   //adult: $("#AdultModal").val(),
+      //   // group:$("#GroupPKG").val(),
+      //   message: $("#MessageModal").val(),
+      //   website: "Gujarat",
+      // };
+      const data = {
+        name: $("#FullNameModal").val(),
+        message:$("#MessageModal").val(),
+        mobileNumber: $("#NumberModal").val(),
         website: "Gujarat",
+        package: localStorage.getItem("pkgname"),
       };
       //    console.log(templateParams);
       emailjs
         .send(
-          "service_67t7hhj",
-          "template_thv6rqb",
-          templateParams,
-          "nmhVg3RXzbcSkzs_u"
+          'service_67t7hhj', 'template_thv6rqb', data,'nmhVg3RXzbcSkzs_u'
           // "service_v2o5j0l",
           // "template_apvv4kv",
           // templateParams,
@@ -67,7 +71,7 @@ function SendLeadLegacy() {
   }
 }
 
-function SendLeadFormLegacy() {
+function SendLeadForm() {
   var PhoneNumber = $("#NumberForm").val();
   var Length = PhoneNumber.trim().length;
   if ($("#NumberForm").val() == "" || Length != 10) {
@@ -78,23 +82,19 @@ function SendLeadFormLegacy() {
       //alert("True"+$("#NoRobot").val());
       $("#ValidateRobotForm").prop("hidden", true);
       $("#ValidatePhone").prop("hidden", true);
-      var templateParams = {
-        from_name: $("#FullNameForm").val(),
-        //email_id: $("#EmailForm").val(),
-        contact_no: $("#NumberForm").val(),
-        package_name: "Sent From Form",
-        //startdate: $("#DateForm").val(),
-        //adult: $("#AdultForm").val(),
-        // group:$("#GroupPKG").val(),
-        message: $("#MessageForm").val(),
+      const data = {
+        name: $("#FullNameModal").val(),
+        message:$("#MessageModal").val(),
+        mobileNumber: $("#NumberModal").val(),
         website: "Gujarat",
+        package: localStorage.getItem("pkgname"),
       };
       //    console.log(templateParams);
       emailjs
         .send(
           "service_67t7hhj",
           "template_thv6rqb",
-          templateParams,
+          data,
           "nmhVg3RXzbcSkzs_u"
           // "service_v2o5j0l",
           // "template_apvv4kv",
@@ -126,7 +126,7 @@ function SendLeadFormLegacy() {
   }
 }
 
-function SendLead() {
+function SendLeadTempStop() {
   var PhoneNumber = $("#NumberModal").val();
   var Length = PhoneNumber.trim().length;
   if ($("#NumberModal").val() == "" || Length != 10) {
@@ -170,7 +170,7 @@ function SendLead() {
   }
 }
 
-function SendLeadForm() {
+function SendLeadFormTempStop() {
   var PhoneNumber = $("#NumberForm").val();
   var Length = PhoneNumber.trim().length;
   if ($("#NumberForm").val() == "" || Length != 10) {
